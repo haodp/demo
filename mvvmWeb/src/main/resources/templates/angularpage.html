@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>angular</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" media="all" href="css/index.css" />
+<!-- http://localhost:9999/mvvmweb/angularpage -->
+</head>
+<body>
+
+
+	<div ng-app="myApp" ng-controller="myCtrl">
+		<div>{{ massgae }}</div>
+		<table>
+			<tr>
+				<th>编号</th>
+				<th>姓名</th>
+				<th>年龄</th>
+				<th>操作</th>
+			</tr>
+			<tr ng-repeat="user in userList">
+				<td>{{ user.id }}</td>
+				<td>{{ user.name }}</td>
+				<td>{{ user.age }}</td>
+				<td><input type="button" value="增加年龄" ng-click="updateAge(user)" /></td>
+				<td><input type="button" value="显示数据" ng-click="showData(user)" /></td>
+			</tr>
+		</table>
+		<input type="button" value="获取数据" ng-click="getData()" />
+		<input type="button" value="添加数据" ng-click="addData()" />
+		<input type="button" value="反序" ng-click="reverseData()" />
+	</div>
+	<script type="text/javascript" src="js/static/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+	<script type="text/javascript" src="js/main/angularpage.js"></script>
+</body>
+</html>

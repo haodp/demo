@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>knockout</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" media="all" href="css/index.css" />
+<!-- http://localhost:9999/mvvmweb/knockoutpage -->
+</head>
+<body>
+
+
+	<div id="app">
+		<div data-bind="text: massage"></div>
+		<table>
+			<tr>
+				<th>编号</th>
+				<th>姓名</th>
+				<th>年龄</th>
+				<th>操作</th>
+			</tr>
+			<!-- ko foreach: userList -->
+			<tr>
+				<td data-bind="text: id"></td>
+				<td data-bind="text: name"></td>
+				<td data-bind="text: age"></td>
+				<td><input type="button" value="删除"
+					data-bind="click: $root.deleteItem" /></td>
+					<td><input type="button" value="增加年龄"
+					data-bind="click: $root.updateAge" /></td>
+					<td><input type="button" value="显示数据"
+					data-bind="click: $root.showData" /></td>
+			</tr>
+			<!-- /ko -->
+		</table>
+		<input type="button" value="获取数据" data-bind="click: getData" /> <input
+			type="button" value="添加数据" data-bind="click: addData" /> <input
+			type="button" value="反序" data-bind="click: reverseData" /> <input
+			type="button" value="清空" data-bind="click: deleteData" />
+	</div>
+	<script type="text/javascript" src="js/static/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/static/knockout-min.js"></script>
+	<script type="text/javascript" src="js/main/knockoutpage.js"></script>
+</body>
+</html>

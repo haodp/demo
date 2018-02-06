@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>web</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" media="all" href="css/index.css"/>
+</head>
+<body>
+<div>
+<table>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>age</th>
+    </tr>
+    <tr th:each="user : ${userList}">
+      <td th:text="${user.id}"></td>
+      <td th:text="${user.name}"></td>
+      <td th:text="${user.age}"></td>
+    </tr>
+  </table>
+</div>
+<script type="text/javascript" src="js/static/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/static/knockout-min.js"></script>
+<script type="text/javascript" src="js/static/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="js/main/index.js"></script>
+</body>
+</html>

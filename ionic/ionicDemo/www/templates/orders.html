@@ -1,0 +1,18 @@
+<ion-view view-title="全部订单">
+  <ion-nav-bar class="bar-calm">
+  </ion-nav-bar>
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="order in orderList" type="item-text-wrap" ng-click="orderDetail(order)">
+        <img ng-src="{{order.orderPic}}">
+        <h2>订单：{{order.orderName}}</h2>
+        <p>配送地址：{{order.orderAddr}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(order)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

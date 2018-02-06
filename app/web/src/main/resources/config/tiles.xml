@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="template.default" template="/views/fw/layout/template.jsp">
+	    <put-attribute name="title" value="yagu+" cascade="true" />
+		<put-attribute name="header" value="/views/fw/layout/header.jsp" />
+		<put-attribute name="navi" value="/views/fw/layout/navi.jsp" />
+		<put-attribute name="content" value="" />
+	</definition>
+
+	<definition name="login"  template="/views/cmn/login.jsp">
+	</definition>
+
+	<!-- Menu画面 -->
+	<definition name="menu" extends="template.default">
+		<put-attribute name="content" value="/views/cmn/menu.jsp" />
+	</definition>
+</tiles-definitions>

@@ -1,0 +1,79 @@
+body {
+    background: #eceef2;
+}
+/*×ó±ß*/
+.aside {
+    width: 300px;
+    background: #2f3b4c;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+/*×ó¶¥±ß*/
+.topLeft {
+    width: 300px;
+    height: 80px;
+}
+/*²à±ßÀ¸*/
+.wrap-menu {
+    overflow:auto;
+    width:300px;
+    background:#2f3b4c;
+}
+.wrap-menu ul li {
+    text-indent:3em;
+    white-space:nowrap;
+}
+.wrap-menu ul li h2 {
+    cursor:pointer;
+    font:16px/31px 'Î¢ÈíÑÅºÚ';
+    color:#b0bec5;
+    background: #2f3b4c;
+    line-height:52px;
+    transition:0.6s;
+}
+.active {
+    background: url("../images/active.png") no-repeat left #2f3b4c;
+}
+.wrap-menu ul li h2:hover {
+    color:#ffffff;
+    background:#2196f3;
+}
+.wrap-menu ul li a {
+    display:block;
+    outline:none;
+    font:14px/31px 'Î¢ÈíÑÅºÚ';
+    height:44px;
+    line-height:44px;
+    color:#889398;
+    text-decoration:none;
+    background:#2a3344;
+}
+.wrap-menu ul li img {
+    margin:0 10px 0 -17px;
+    line-height:10px;
+    width:7px;
+    height:7px;
+    background:url(../../common/images/arrow.png) no-repeat;
+    border:none;
+}
+.wrap-menu ul li img.unfold {
+    background-position:0 -9px;
+}
+/*ÄÚÈÝ*/
+.content {
+    position: absolute;
+    left: 300px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+/*ÓÒ¶¥±ß*/
+.topRight {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 2px solid #d7d9dd;
+}

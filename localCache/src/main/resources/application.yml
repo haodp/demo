@@ -1,0 +1,18 @@
+server:
+  port: 9095
+  contextPath : /cache
+spring:
+  application:
+    name: web
+  jmx:
+    enabled: false
+eureka:
+  client:
+    serviceUrl:
+      defaultZone : http://localhost:8761/eureka/
+    
+    
+logging:
+#  file: logs/web-client.log
+  level:
+    ROOT: INFO

@@ -1,0 +1,587 @@
+@CHARSET "UTF-8";
+/*设定placeholder字体颜色20151225by周楚培*/
+::-moz-placeholder {
+color: #999!important;
+}
+::-webkit-input-placeholder {
+color:#999!important;
+}
+:-ms-input-placeholder {
+color:#999!important;
+}
+/*/设定placeholder字体颜色*/
+*:not(.caret) {
+	color : #008ca5!important; border-width:1px;
+	border-color: #01778c!important;
+}
+.row {/*20160122修改文字间距by周楚培*/
+	margin: 10px 0;
+	line-height: 2;
+}
+
+html,
+body {
+	width: 100%;
+	padding: 0!important;
+}
+body {
+	font-size: 12px!important;
+	font-family: Microsoft YaHei, "微软雅黑", Arial, Helvetica, sans-serif;
+	color: #666;
+}
+body button { font-size: 12px!important; }
+body .sidebar .sidebar-menu a { font-size: 13px!important; }
+.datetimepicker,
+.datepicker { z-index : 2000; }
+input:not([type="radio"]):not([type="checkbox"]):not([type="file"]) {/*修改输入框样式by周楚培*/
+	height : 30px;
+	border : 1px solid #008ca5;
+	border-radius: 4px!important;
+	webkit-border-radius: 4px!important;
+}
+button.multiselect{/*修改下拉按钮样式by周楚培*/
+	height : 30px;
+	border-radius: 4px!important;
+	webkit-border-radius: 4px!important;
+}
+input[type="text"]:focus,
+input[type="password"]:focus { background: #fafabb; }/*20151229设定输入框输入样式样式by周楚培*/
+input[type="file"] {/*20151224设定文件上传样式by周楚培*/
+	margin: 0;
+	padding: 0;
+	height: 22px;
+	line-height: 18px; border:1px solid #008ca5\9;
+}
+thead {
+	background: #008ca5;
+	font-size: 14px;
+}/*20160114修改表头样式by周楚培*/
+thead tr th .th-inner { color: #fff!important; }/*20151230修改表头样式by周楚培*/
+.btn-default:not(.multiselect):not(.dropdown-toggle),
+.btn-sm {
+	margin: 3px;/*20160108修改按钮间距by周楚培*/
+	color : #ffffff!important;
+	background: #008ca5!important;
+}
+.table>tbody>tr>td { vertical-align: middle; }
+.multiselect { text-align: left; }
+.content-wrapper { background-color: #fff; overflow:hidden;}
+/* H1 - H6 font */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 { font-family: Microsoft YaHei, "微软雅黑", Arial, Helvetica, sans-serif; }
+.dropdown-menu [type=radio] { display: none; }
+.multiselect-container { width: 100%; }/*20151224修改下拉框宽度by周楚培*/
+ul.dropdown-menu li>a>label:not(.radio) {/*20160104修改下拉框样式by周楚培*/
+	width: 100%;
+	padding: 3px 5px 3px 15px!important;
+}
+.loading-popover-mask {
+	z-index: 1051;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: yellow;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+	display: none;
+}
+/** 列表部分样式 */
+.no-padding-top { padding-top: 0px; }
+/** 不可改变大小 */
+textarea { resize: none; }
+span.input-group-addon { border-left: 0; }
+div.has-error { }
+div.has-error button {
+	border: 1px solid #a94442;
+	color: #a94442;
+}
+div.has-error button:hover { border: 1px solid #a94442; }
+div.has-error div span.input-group-addon { border-color: #a94442; }
+div.has-error .help-block {
+	position: absolute;
+	top: -4px;
+	left: 101%;
+	width: 50%;
+	padding: 5px;
+	z-index: 1000;
+	border: 1px solid #a94442;
+	border-radius: 4px;
+	background-color: #ebccd1;
+	color: #a94442;
+	font-weight: 700;
+	font-size: 14px;
+}
+.help-block .tooltip-arrow-error {
+	top: 50%;
+	left: 0;
+	margin-top: -5px;
+	border-width: 5px 5px 5px 0;
+	border-right-color: #a94442;
+}
+.tooltip-arrow-error {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-color: transparent;
+	border-style: solid;
+}
+.tooltip-inner-error {
+	max-width: 200px;
+	padding: 3px 8px;
+	color: #a94442;
+	font-weight: 700;
+	text-align: left;
+	text-decoration: none;
+	background-color: yellow;
+	border-radius: 4px;
+	border: 1px solid #a94442;
+}
+/** modal-dialog头部上边框 */
+.ext-modal-dialog .modal-header { border-top: 5px solid #2CBC39; }
+/** alert：提示 */
+.modal-dialog-info .modal-content {
+	color: #31708f;
+	border-color: #bce8f1;
+}
+.modal-dialog-info .modal-header { border-top: 8px solid #bce8f1; }
+/** alert：警告 */
+.modal-dialog-warning .modal-content {
+	color: #8a6d3b;
+	border-color: #faebcc;
+}
+.modal-dialog-warning .modal-header { border-top: 8px solid #faebcc; }
+/** alert：错误 */
+.modal-dialog-error .modal-content {
+	color: #a94442;
+	border-color: #ebccd1;
+}
+.modal-dialog-error .modal-header { border-top: 8px solid #ebccd1; }
+/** popup：成功 */
+.popup-success {
+	color: #3c763d;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+	font-weight: 700;
+}
+/** popup：提示 */
+.popup-info {
+	color: #31708f;
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+	font-weight: 700;
+}
+/** popup：警告 */
+.popup-warning {
+	color: #8a6d3b;
+	background-color: #fcf8e3;
+	border-color: #faebcc;
+	font-weight: 700;
+}
+/** popup：错误 */
+.popup-error {
+	color: #a94442;
+	background-color: #f2dede;
+	border-color: #ebccd1;
+	font-weight: 700;
+}
+/** multiselect 背景色、边框圆角 */
+button.multiselect {
+	background-color: #fff;
+	border-radius: 0; border-color:#008ca5;
+}
+/** multiselect 不可编辑状态 */
+button.multiselect[disabled] {
+	background-color: #eee;
+	border-color: #ccc;
+	cursor: not-allowed;
+}
+/** multiselect 下拉列表边框圆角、颜色 */
+ul.multiselect-container {
+	border-radius: 0;
+	border-color: #ddd;
+}
+/** multiselect 下拉箭头位置 */
+button.multiselect b {
+	position: absolute;
+	top: 15px;
+	right: 10px;
+}
+.treeview a {}
+.menu_title {
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 400;
+}
+.menu-ico {
+	display: inline-block;
+	position: relative;
+	top: 4px;
+	width: 22px;
+	height: 22px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-right: 5px;
+}
+.sidebar-menu li>a>.pull-right {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	margin-top: -4px;
+}
+.hospital-higlight { background-image: url(../images/menu_icon/hospital-ico-higlight.png); }
+.hospital { background-image: url(../images/menu_icon/hospital-ico.png); }
+.doctor-higlight { background-image: url(../images/menu_icon/doctor-ico-higlight.png); }
+.doctor { background-image: url(../images/menu_icon/doctor-ico.png); }
+.assessment-higlight { background-image: url(../images/menu_icon/medical-ico-higlight.png); }
+.assessment { background-image: url(../images/menu_icon/medical-ico.png); }
+.patient-higlight { background-image: url(../images/menu_icon/file-ico-higlight.png); }
+.patient { background-image: url(../images/menu_icon/file-ico.png); }
+.app-higlight { background-image: url(../images/menu_icon/app-ico-higlight.png); }
+.app { background-image: url(../images/menu_icon/app-ico.png); }
+.system-higlight { background-image: url(../images/menu_icon/manage-ico-higlight.png); }
+.system { background-image: url(../images/menu_icon/manage-ico.png); }
+.params-higlight { background-image: url(../images/menu_icon/set-ico-higlight.png); }
+.params { background-image: url(../images/menu_icon/set-ico.png); }
+.remote-higlight { background-image: url(../images/menu_icon/useranddocter_ico_higlight.png); }
+.remote { background-image: url(../images/menu_icon/useranddocter_ico.png); }
+.usercenter-higlight { background-image: url(../images/menu_icon/usercenter-ico-higlight.png); }
+.usercenter { background-image: url(../images/menu_icon/usercenter-ico.png); }
+.userm-higlight { background-image: url(../images/menu_icon/user-ico-higlight.png); }
+.userm { background-image: url(../images/menu_icon/user-ico.png); }
+.role-higlight { background-image: url(../images/menu_icon/role-ico-higlight.png); }
+.role { background-image: url(../images/menu_icon/role-ico.png); }
+.menu-higlight { background-image: url(../images/menu_icon/menu-ico-higlight.png); }
+.menu { background-image: url(../images/menu_icon/menu-ico.png); }
+.tickwarn-higlight { background-image: url(../images/menu_icon/tickwarn-ico-higlight.png); }
+.tickwarn { background-image: url(../images/menu_icon/tickwarn-ico.png); }
+.warn-higlight { background-image: url(../images/menu_icon/warn-ico-higlight.png); }
+.warn { background-image: url(../images/menu_icon/warn-ico.png); }
+.tick-higlight { background-image: url(../images/menu_icon/tick-ico-higlight.png); }
+.tick { background-image: url(../images/menu_icon/tick-ico.png); }
+.editcontent-higlight { background-image: url(../images/menu_icon/editcontent-ico-higlight.png); }
+.editcontent { background-image: url(../images/menu_icon/editcontent-ico.png); }
+.editpassword-higlight { background-image: url(../images/menu_icon/editpassword-ico-higlight.png); }
+.editpassword { background-image: url(../images/menu_icon/editpassword-ico.png); }
+.hos { background-image: url(../images/menu_icon/hos-ico.png); }
+.hos-higlight { background-image: url(../images/menu_icon/hos-ico-higlight.png); }
+.nor { background-image: url(../images/menu_icon/nor-ico.png); }
+.nor-higlight { background-image: url(../images/menu_icon/nor-ico-higlight.png); }
+.ungroup { background-image: url(../images/menu_icon/ungroup-ico.png); }
+.ungroup-higlight { background-image: url(../images/menu_icon/ungroup-ico-higlight.png); }
+.firmware { background-image: url(../images/menu_icon/firmware-ico.png); }
+.firmware-higlight { background-image: url(../images/menu_icon/firmware-ico-higlight.png); }
+.mokuai { background-image: url(../images/menu_icon/mokuai-ico.png); }
+.mokuai-higlight { background-image: url(../images/menu_icon/mokuai-ico-higlight.png); }
+.log-higlight { background-image: url(../images/menu_icon/log-ico-higlight.png); }
+.log { background-image: url(../images/menu_icon/log-ico.png); }
+.appWatch-higlight { background-image: url(../images/menu_icon/appWatch-ico-higlight.png); }
+.appWatch { background-image: url(../images/menu_icon/appWatch-ico.png); }
+.version-higlight { background-image: url(../images/menu_icon/version-ico-higlight.png); }
+.version { background-image: url(../images/menu_icon/version-ico.png); }
+
+.testData-higlight { background-image: url(../images/menu_icon/version-ico-higlight.png); }
+.testData { background-image: url(../images/menu_icon/version-ico.png); }
+
+.csc-higlight{ background-image: url(../images/menu_icon/csc-ico-higlight.png); }
+.csc{ background-image: url(../images/menu_icon/csc-ico.png); }
+
+.mcm-higlight{ background-image: url(../images/menu_icon/mcm-ico-higlight.png); }
+.mcm{ background-image: url(../images/menu_icon/mcm-ico.png); }
+
+input.fix-width { width: 210px!important; }
+.bootstrap-table .table,
+.bootstrap-table .table>tbody>tr>td,
+.bootstrap-table .table>tbody>tr>th,
+.bootstrap-table .table>tfoot>tr>td,
+.bootstrap-table .table>tfoot>tr>th,
+.bootstrap-table .table>thead>tr>td { padding: 6px 0!important; }/*20160104修改表格单元格样式by周楚培*/
+.modal-footer { 
+	padding:0 0 15px;
+	border-top:none;
+	text-align: center; 
+}/*20160118修改弹出框按钮框样式方式by周楚培*/
+.modal-footer .btn {
+	min-width: 60px;
+	border: none;
+}/*20151230修改弹出框按钮样式by周楚培*/
+.dropdown-menu>.active>a { 
+	background: #008ca5;
+	color:#fff!important;
+}/*20160114调整下拉菜单选中状态颜色by周楚培*/
+.dropdown-menu>.active>a>label { color: #fff!important; }/*20160114调整下拉菜单选中状态颜色by周楚培*/
+.active .menu_title {
+	color: #fff!important;
+	background: #008ca5!important;
+	padding: 0 5px;
+}/*20151230左导航样式颜色by周楚培*/
+.pagination .active a:hover { background: #fff!important; }/*20151230左导航样式颜色by周楚培*/
+button[disabled] { color: #008ca5!important; }/*20151225设置按钮不可用状态颜色by周楚培*/
+button[disabled] span { color: #008ca5!important; }/*20151225设置按钮不可用状态颜色by周楚培*/
+.dropdown-menu { min-width: 80px; }/*20160104调整下拉菜单最小宽度by周楚培*/
+
+
+.col-md-2 div .nav.nav-pills.nav-stacked .active a {/*20151231菜单选中状态样式by周楚培*/
+	display: inline;
+	margin: 10px 15px;
+	padding: 0 5px;
+	background: #008ca5!important;
+}
+.floatLeft { float: left; }/*20160106左浮动by周楚培*/
+.floatRight { float: right; }/*20160106右浮动by周楚培*/
+.clearBoth { clear: both; }/*20160106清除左右浮动by周楚培*/
+.blockCenter{margin:0 auto;}/*20160122块元素居中by周楚培*/
+.displayBlock{display:block;}/*20160122强制转换为快元素块元素by周楚培*/
+.textCenter{text-align:center;}/*20160122文字居中by周楚培*/
+/*日期控件带时间开始20160106定义新样式by周楚培*/
+/*分钟*/
+.datetimepicker-minutes .table-condensed thead,
+.datetimepicker-minutes .table-condensed thead tr { background: #008ca5; }
+.datetimepicker-minutes .table-condensed thead tr th { color: #fff!important; }
+.datetimepicker-minutes .table-condensed thead tr:nth-child(1) th:hover { background: #03aaBC; }
+/*小时*/
+.datetimepicker-hours .table-condensed thead,
+.datetimepicker-hours .table-condensed thead tr { background: #008ca5; }
+.datetimepicker-hours .table-condensed thead tr th { color: #fff!important; }
+.datetimepicker-hours .table-condensed thead tr:nth-child(1) th:hover { background: #03aaBC; }
+/*日*/
+.datetimepicker-days .table-condensed thead,
+.datetimepicker-days .table-condensed thead tr { background: #008ca5; }
+.datetimepicker-days .table-condensed thead tr th { color: #fff!important; }
+.datetimepicker-days .table-condensed thead tr:nth-child(1) th:hover { background: #03aaBC; }
+/*月*/
+.datetimepicker-months .table-condensed thead,
+.datetimepicker-months .table-condensed thead tr { background: #008ca5; }
+.datetimepicker-months .table-condensed thead tr th { color: #fff!important; }
+.datetimepicker-months .table-condensed thead tr:nth-child(1) th:hover { background: #03aaBC; }
+/*年*/
+.datetimepicker-years .table-condensed thead,
+.datetimepicker-years .table-condensed thead tr { background: #008ca5; }
+.datetimepicker-years .table-condensed thead tr th { color: #fff!important; }
+.datetimepicker-years .table-condensed thead tr:nth-child(1) th:hover { background: #03aaBC; }
+/*日期控件不带时间开始20160106定义新样式by周楚培*/
+/*分钟*/
+.datepicker-minutes .table-condensed thead,
+.datepicker-minutes .table-condensed thead tr { background: #008ca5; }
+.datepicker-minutes .table-condensed thead tr th { color: #fff!important; }
+.datepicker-minutes .table-condensed thead tr:nth-child(1) th:hover { background: #03aaBC; }
+/*小时*/
+.datepicker-hours .table-condensed thead,
+.datepicker-hours .table-condensed thead tr { background: #008ca5; }
+.datepicker-hours .table-condensed thead tr th { color: #fff!important; }
+.datepicker-hours .table-condensed thead tr:nth-child(1) th:hover { background: #03aaBC; }
+/*日*/
+.datepicker-days .table-condensed thead,
+.datepicker-days .table-condensed thead tr { background: #008ca5; }
+.datepicker-days .table-condensed thead tr th { color: #fff!important; }
+.datepicker-days .table-condensed thead tr:nth-child(1) th:hover { background: #03aaBC; }
+/*月*/
+.datepicker-months .table-condensed thead,
+.datepicker-months .table-condensed thead tr { background: #008ca5; }
+.datepicker-months .table-condensed thead tr th { color: #fff!important; }
+.datepicker-months .table-condensed thead tr:nth-child(1) th:hover { background: #03aaBC; }
+/*年*/
+.datepicker-years .table-condensed thead,
+.datepicker-years .table-condensed thead tr { background: #008ca5; }
+.datepicker-years .table-condensed thead tr th { color: #fff!important; }
+.datepicker-years .table-condensed thead tr:nth-child(1) th:hover { background: #03aaBC; }
+/*20160108修改翻页按钮样式by周楚培*/
+.pull-right.pagination ul li.active a {
+	background: #008ca5!important;
+	color: #fff!important;
+}
+.pull-right.pagination ul li.active a:hover { background: #008ca5!important; }
+/*20160111修改浮动左导航样式by周楚培*/
+.nav.nav-pills.nav-stacked { line-height: 1; }
+.row .col-md-2 .nav.nav-pills.nav-stacked .active a {
+	margin: 5px 0!important;
+	padding: 0 0 0 16px!important;
+	display: block!important;
+	height: 30px;
+	line-height: 30px;
+	background: RGBA(50,137,154,0.9)!important;
+}
+.active .fa-edit:before,
+.active .fa-pencil-square-o:before { color: #fff!important; }
+/*/20160111修改浮动左导航样式by周楚培*/
+/*20160112修改日期控件已选中样式by周楚培*/
+.datetimepicker div table.table-condensed tbody tr .active { background: #ccc; }
+.datetimepicker div table.table-condensed tbody tr .active:hover { background: #ddd; }
+ul.dropdown-menu li a .radio { padding: 3px 0 3px 10px; }/*20160114修改下拉菜单间隔by周楚培*/
+/*20160114修改页数选择按钮样式by周楚培*/
+.page-list .dropdown-toggle { width: 60px; }
+.page-list .dropdown-menu { min-width: 60px; }
+.page-list .dropdown-menu li a { padding: 3px 10px; }
+/*/20160114修改页数选择按钮样式by周楚培*/
+/*20160115日期控件缩小by周楚培*/
+.datetimepicker,
+.datepicker { width: 160px; }
+.datetimepicker .table-condensed thead tr th,
+.datepicker .table-condensed thead tr th {
+	padding: 3px;
+	font-size: 14px;
+}
+.datetimepicker .table-condensed tbody tr td,
+.datepicker .table-condensed tbody tr td {
+	padding: 3px;
+	font-size: 12px;
+}
+/*/20160115日期控件缩小by周楚培*/
+
+/*20160118红色*垂直居中样式by周楚培*/
+.redText {color: red!important;}
+.floatLabel{position: relative;}
+.floatIcon{
+	position:absolute;
+	top: 3px;
+    right: 5px;
+}
+/*/20160118红色*垂直居中样式by周楚培*/
+/*20160118radio按钮组样式样式by周楚培*/
+.radioBox{min-width:160px;}
+.radioBox input[type="radio"]{
+	margin:0 0 0 10px;
+}
+.radioBox label{
+	margin:0;
+	padding:0 5px;
+	font-size:14px;
+	line-height:30px;
+}
+/*/20160118radio按钮组样式样式by周楚培*/
+.dialog .modal-dialog { margin: 10% auto 0; }/*20151229调整弹出框布局by周楚培*/
+.dialog .modal-dialog .modal-content {border-radius:6px;}/*20160119弹出框样式by周楚培*/
+/*20160119弹出框头部样式by周楚培*/
+.modal-header{
+	padding:10px 15px;
+	border-radius:6px 6px 0 0;
+	background:#008ca5;
+}
+.modal-header .modal-title{
+	height:20px;
+	color:#fff!important;
+	font-size:16px;
+	line-height:20px;
+}
+.modal-header .close {/*20160118调整弹出框关闭按钮样式by周楚培*/
+	font-weight: 700;
+	color: #fff!important;
+	opacity: 0.6;
+	font-size: 20px!important;
+	line-height: 20px;
+}
+/*/20160118弹出框头部样式by周楚培*/
+/*20160119弹出框按钮框样式by周楚培*/
+.modal-body{
+	padding:15px 15px 0;
+}
+.modal-dialog form .row{margin:10px 0;}/*20160119弹出框行间距by周楚培*/
+.modal-body .row>label{
+	margin:0;
+	line-height:30px;
+}
+/*/20160118弹出框按钮框样式by周楚培*/
+.modal-body .warnText{/*20160118弹出框text样式by周楚培*/
+	font-size:14px;
+	line-height:30px;
+	text-align:center;
+}
+.btn .fa:before{color:#fff!important;}/*20160118按钮图形文字颜色by周楚培*/
+
+.bars.pull-left{margin:10px 0 0;}/*20160119表头间距by周楚培*/
+table.table>tbody>tr{/*20160119表格行高by周楚培*/
+	height:50px;
+	line-height:50px;
+}
+.bootstrap-table .fixed-table-container { border: none; }/*20160119表格双边框去除by周楚培*/
+.table>tbody>tr{background:#fff;}/*20160121表格各行变色by周楚培*/
+.table>tbody>tr:nth-child(2n){background:#eaeaea;}/*20160121表格各行变色by周楚培*/
+/*20160121弹出框样式by周楚培*/
+.modal-dialog.modal-sm{
+	min-width: 100px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.modal-body.text-center.popup-error,
+.modal-body.text-center.popup-success{
+	padding:15px 10px;
+	line-height:20px;
+}
+/*/20160121弹出框样式by周楚培*/
+.btn.btn-danger{color:#fff!important;}
+/*20160121下拉框菜单样式by周楚培*/
+.topBox .multiselect:hover,
+.topBox .dropdown-menu li:hover,
+.topBox .dropdown-menu li:not(.active) a:hover { background: #fafabb!important; }
+/*/20160121下拉框菜单样式by周楚培*/
+.breakRow{	word-break: break-all;}/*20160122强制换行by周楚培*/
+.noWrap{/*20160122单行不换行，超出省略by周楚培*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.word10{max-width:10em;}/*201601221宽度n个汉字by周楚培*/
+.word8{max-width:8em;}
+.word6{max-width:6em;}
+.word4{max-width:4em;}
+
+
+
+
+/*定时提醒*/
+.timedReminder{
+	position: absolute;
+    border: 1px solid #ffd100!important;
+    border-radius: 5px;
+    right: 0;
+    text-align: right;
+    color: #f00!important;
+    padding: 5px 10px;
+    white-space: nowrap;
+    background: #efff1c;
+    max-width: 500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.timedReminder:HOVER{
+	cursor: pointer;
+}
+.timedRemindercloseimg{
+	position: absolute;
+    top: -7px;
+    right: -7px;
+    width: 15px;
+    z-index: 10;
+}
+.timedRemindercloseimg:HOVER{
+	cursor: pointer;
+}
+.timedReminderdiv{
+	position: relative;
+    top: -10px;
+}
+/*201609058 设置预警阈值*/
+.inputBox{
+}
+.inputBox label{
+	width:28%;
+	text-align: left;
+}
+.inputBox label:nth-child(1){
+	text-align: right;
+	width:38%;
+}
+.inputBox input{
+	width:30%;
+}

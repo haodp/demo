@@ -1,0 +1,48 @@
+/* Empty. Add your own CSS if you like */
+html {
+  font-size:100%;
+}
+body {
+  width: 100%;
+  margin:0;
+  padding:0;
+  overflow: hidden;
+  font-size:1em;
+}
+/* 去掉input type=number 的上下箭头 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+.overflow-hide {
+  overflow: hidden;
+}
+.background-none {
+  background: none;
+  border: none;
+}
+.prompt4m{
+  font-size: 0.8em;
+  color: #fff;
+  position: fixed;
+  z-index: 99;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  display: inline-block;
+  background-color:#333;
+  padding: 5px 15px;
+}
+
+.row-center {
+  text-align: center;
+}
+
+.icon-large {
+  font-size: xx-large;
+  color: aqua;
+}
+.home-label {
+  font-size: smaller;
+}

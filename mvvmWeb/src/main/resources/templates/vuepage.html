@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>vue</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" media="all" href="css/index.css" />
+<!-- http://localhost:9999/mvvmweb/vuepage -->
+</head>
+<body>
+
+
+	<div id="app">
+		<div>{{ message }}</div>
+		<table>
+			<tr>
+				<th>编号</th>
+				<th>姓名</th>
+				<th>年龄</th>
+				<th>操作</th>
+			</tr>
+			<tr v-for="(user,index)  in rowdata">
+				<td>{{user.id}}</td>
+				<td>{{user.name}}</td>
+				<td>{{user.age}}</td>
+				<td><input type="button" value="增加年龄" v-on:click="updatAge(user,index,$event)" /></td>
+				<td><input type="button" value="显示数据" v-on:click="showData(user)" /></td>
+			</tr>
+		</table>
+		<input type="button" value="获取数据" v-on:click="getData()" />
+		<input type="button" value="添加数据" v-on:click="addData()" />
+		<input type="button" value="反序" v-on:click="reverseData()" />
+	</div>
+	<script type="text/javascript" src="js/static/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/static/vue.min.js"></script>
+	<script type="text/javascript" src="js/main/vuepage.js"></script>
+</body>
+</html>

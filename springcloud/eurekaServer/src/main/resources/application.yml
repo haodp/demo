@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: eurekaServer
+
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      
+logging:
+#  file: logs/eureka-server.log
+  level:
+    ROOT: INFO
